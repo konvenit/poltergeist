@@ -33,8 +33,7 @@ module Capybara::Poltergeist
 
     def initialize(server, options = {})
       @server            = server
-      @path              = Cliver::detect!((options[:path] || PHANTOMJS_NAME),
-                                           *PHANTOMJS_VERSION)
+      @path              = Cliver::detect!((options[:path] || PHANTOMJS_NAME))
 
       @window_size       = options[:window_size]       || [1024, 768]
       @phantomjs_options = options[:phantomjs_options] || []
